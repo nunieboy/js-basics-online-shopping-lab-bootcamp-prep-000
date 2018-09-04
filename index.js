@@ -45,12 +45,11 @@ function removeFromCart(item) {
     for (let i = 0; cart.length > i; i++){
       if (item === cart[i].itemName) {
         cart.splice(i, 0)
-        return cart
       } else {
-        `That item is not in your cart.`
+        return `That item is not in your cart.`
       } 
     }
-  }
+  } return cart
 }
 
 function placeOrder(cardNumber) {
