@@ -41,16 +41,27 @@ function total() {
 }
 
 function removeFromCart(item) {
-  if (cart.length > 1){
-    for (let i = 0; cart.length > i; i++){
-      if (item === cart[i].itemName) {
-        cart.splice(i, 1)
-      } else {
-        return `That item is not in your cart.`
-      } 
+  let cart = getCart()
+  for (let i=0; i < cart.length; i++){
+    if (cart[i].itemName === item ){
+      cart.splice(i, 1)
+      return cart
     }
-  } return cart
+  }
+  return "That item is not in your cart."
 }
+
+//function removeFromCart(item) {
+//  if (cart.length > 1){
+//    for (let i = 0; cart.length > i; i++){
+//      if (item === cart[i].itemName) {
+//        cart.splice(i, 1)
+//      } else {
+//        return `That item is not in your cart.`
+//      } 
+//    }
+//  } return cart
+//}
 
 function placeOrder(cardNumber) {
   // write your code here
