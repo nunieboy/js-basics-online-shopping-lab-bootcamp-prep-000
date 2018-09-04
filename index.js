@@ -57,7 +57,7 @@ function placeOrder(cardNumber) {
     return ` Sorry, we don't have a credit card on file for you.`
   } else {
     var newTotal = total()
-    cart.slice(cart.length +1, cart.length + 2 )
+    cart = []
     return `Your total cost is \$${newTotal}, which will be charged to the card ${cardNumber}` 
   }
 }
